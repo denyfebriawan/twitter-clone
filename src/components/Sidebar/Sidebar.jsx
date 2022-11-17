@@ -1,21 +1,22 @@
 
-import React, { useState } from "react";
-import "./Sidebar.css";
 import TwitterIcon from '@mui/icons-material/Twitter';
-import SidebarOption from './SidebarOption';
-import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
+import HomeIcon from '@mui/icons-material/Home';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import Messages from '@mui/icons-material/MailOutline';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import ListAltIcon from '@mui/icons-material/ListAlt';
-import Profile from '@mui/icons-material/PermIdentity';
-import Button from '@mui/material/Button';
-import { useAuth } from "../../context/AuthContext";
-import {useNavigate} from 'react-router-dom';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { Button } from '@mui/material';
+import './Sidebar.css';
+import "./SidebarOption.css"
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
+import { useState } from 'react';
 
-const Sidebar =  () => {
-  
+
+const Sidebar = () => {
     const navigate = useNavigate();
     const {logout} = useAuth();
     const [errMsg, setErrMsg] = useState("");
@@ -37,20 +38,53 @@ const Sidebar =  () => {
           
         }
       };
+
     return (
         <div className="sidebar">
-            <TwitterIcon className="sidebar__twitterIcon"/>
-            <SidebarOption active Icon={HomeIcon} text={"Home"}/>
-            <SidebarOption Icon={SearchIcon} text={"Explore"}/>
-            <SidebarOption Icon={NotificationsNoneIcon} text={"Notifications"}/>
-            <SidebarOption Icon={Messages} text={"Messages"}/>
-            <SidebarOption Icon={BookmarkBorderIcon} text={"Bookmarks"}/>
-            <SidebarOption Icon={ListAltIcon} text={"List"}/>
-            <SidebarOption Icon={Profile} text={"Profile"}/>
-            <Button variant="outlined" className='sidebar__tweet' fullWidth>Tweet</Button>
-            <Button variant="outlined" className='sidebar__tweet' onClick={handleLogout}>Log Out</Button>
-        </div>
-    );
-}
+            <div className='sidebarOption'>
+                <TwitterIcon className='sidebar__twitterIcon'/>
+            </div>
+            <div className='sidebarOption' onClick={()=>{navigate("/");}}>
+                <HomeIcon className='sidebar__twitterIcon' />
+                <h2>Home</h2>
+            </div>
+            <div className='sidebarOption'>
+                <SearchIcon className='sidebar__twitterIcon'/>
+                <h2>Explore</h2>
+            </div>
+            <div className='sidebarOption'>
+                <NotificationsNoneIcon className='sidebar__twitterIcon'/>
+                <h2>Notifications</h2>
+            </div>
+            <div className='sidebarOption'>
+                <MailOutlineIcon className='sidebar__twitterIcon'/>
+                <h2>Messages</h2>
+            </div>
+            <div className='sidebarOption'>
+                <BookmarkBorderIcon className='sidebar__twitterIcon'/>
+                <h2>Bookmarks</h2>
+            </div>
+            <div className='sidebarOption'>
+                <ListAltIcon className='sidebar__twitterIcon'/>
+                <h2>Lists</h2>
+            </div>
+            <div className='sidebarOption'>
+                <PermIdentityIcon className='sidebar__twitterIcon'/>
+                <h2>Profile</h2>
+            </div>
+            <div className='sidebarOption'>
+                <MoreHorizIcon className='sidebar__twitterIcon'/>
+                <h2>More</h2>
+            </div>
+            
+
+            <Button variant="outlined" className="sidebarTweet" fullWidth>
+                Tweet</Button>
+
+                <Button variant="outlined" className="sidebarLogout" onClick={handleLogout}>
+                Log Out</Button>
+        </div >
+    )
+};
 
 export default Sidebar;

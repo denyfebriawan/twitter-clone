@@ -5,30 +5,24 @@
     padding-bottom: 10px;
 }
 
-.post__avatar {
-    padding: 20px;
-}
-
-.post__body {
-    flex: 1;
-    padding: 10px;
-}
-
-.post__body > img {
+.post__body>img {
     border-radius: 20px;
-    width: 100%;
+    max-width: 480px;
 }
 
+.post__footer {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-inline: auto;
+    cursor: pointer !important;
+    margin-left: auto;
+}
 
-
-.post__headerText > h3{
-    font-size: 15px;
+.post__headerText>h3 {
+    font-size: 5px;
     margin-bottom: 5px;
-}
-
-.post__headerDescription {
-    margin-bottom: 10px;
-    font-size: 15px;
 }
 
 .post__badge {
@@ -36,16 +30,43 @@
     color: var(--twitter-color);
 }
 
-.post__footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
 .post__headerSpecial {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 15px;
     color: gray;
-    
 }
 
+.post__avatar {
+    padding: 20px;
+}
+
+.ChatBubbleOutlineIcon:hover {
+    color: var(--twitter-color);
+}
+
+.RepeatRoundedIcon:hover {
+    color: var(--twiter-reply);
+}
+
+.FavoriteBorderIcon:hover {
+    color: var(--twitter-like);
+}
+
+.IosShareOutlinedIcon:hover {
+    color: var(--twitter-share);
+}
+
+.MoreHorizRounded {
+    cursor: pointer !important;
+    margin-left: auto !important;
+    margin-top: 20px !important;
+    color: rgb(93,109,121)
+}
+
+.MoreHorizRounded:hover {
+    color: var(--twitter-share);
+}
+
+.DeleteMenu{
+    color: rgb(244,33,46);
+}
