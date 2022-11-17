@@ -1,0 +1,60 @@
+.details {
+    display: flex !important;
+    height: 100vh;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 10px;
+}
+
+.replyBox {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--twitter-background);
+    padding-right: 10px;
+}
+
+.replyBox>form {
+    display: flex;
+    flex-direction: column;
+}
+
+.replyBox__input {
+    padding: 20px;
+    display: flex;
+}
+
+.replyBox__input>input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--twitter-background);
+}
+
+.replyBox__imageInput{
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.replyBox__replyButton {
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    width: 80px;
+    height: 40px !important;
+    /* margin-top: 10px !important; */
+    margin-left: auto !important;
+    cursor: pointer;
+    ;
+}
+
+.AAA{
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+}
