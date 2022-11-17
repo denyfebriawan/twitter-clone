@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import axios from "../api/axios";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 import InfoIcon from "@mui/icons-material/Info";
